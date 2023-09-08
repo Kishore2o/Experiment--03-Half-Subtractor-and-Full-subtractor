@@ -33,22 +33,51 @@ Write the detailed procedure here
 
 
 ## Program:
-/*
+```
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-
+Developed by: S.Kishore
+RegisterNumber:  212222240050
+## HALF SUBRACTOR :
+module ex4(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference = (a^b);
+assign borrow = (~a&b);
+endmodul
+## FULL SUBRACTOR :
+module exp4(a,b,bin,diff,borrow);
+input a,b,bin;
+output diff,borrow;
+assign diff = (a^b^bin);
+assign borrow = (~a&b)|((~a^b)&bin);
+endmodul
+```
 ## Output:
-
-## Truthtable
-
-
-
-##  RTL realization
+## HALF SUBRACTOR:
+## Truthtable:
+![half add truth](https://github.com/Kishore2o/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679883/ec8afdeb-efb0-4167-8b19-e4d546bc92cb)
 
 
-## Timing diagram 
+
+##  RTL realization:
+![half ad rtl](https://github.com/Kishore2o/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679883/2fff7520-af81-425a-8ad5-e619516609cb)
+
+
+## Waveform diagram :
+![half ad wave](https://github.com/Kishore2o/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679883/74d208f1-1c9f-4d51-869b-2cc516d8407a)
+
+## FULL SUBRACTOR :
+## Truthtable:
+![full ad truth](https://github.com/Kishore2o/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679883/acfef5d7-ea03-43b2-b578-841e0b6eadb0)
+
+
+
+##  RTL realization:
+![ful ad rtl](https://github.com/Kishore2o/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679883/e2cda82d-dfaa-4b54-b326-384a5ff56a87)
+
+
+## Waveform diagram :
+![full add wave](https://github.com/Kishore2o/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679883/291025b0-a314-4aeb-a102-dd4c039e6613)
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
