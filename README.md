@@ -1,4 +1,4 @@
-# Experiment--03-Half-Subtractor-and-Full-subtractor
+# Experiment-04-Half-Subtractor-and-Full-subtractor
 ## Implementation-of-Half-subtractor-and-Full-subtractor-circuit
 ## AIM:
 To design a half subtractor and full subtractor circuit and verify its truth table in Quartus using Verilog programming.
@@ -33,18 +33,22 @@ Write the detailed procedure here
 
 
 ## Program:
-```
+
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
 Developed by: S.Kishore
 RegisterNumber:  212222240050
+
 ## HALF SUBRACTOR :
+```
 module ex4(a,b,difference,borrow);
 input a,b;
 output difference,borrow;
 assign difference = (a^b);
 assign borrow = (~a&b);
 endmodul
+```
 ## FULL SUBRACTOR :
+```
 module exp4(a,b,bin,diff,borrow);
 input a,b,bin;
 output diff,borrow;
